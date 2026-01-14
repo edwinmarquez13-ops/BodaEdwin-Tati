@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Edwin & Tati | Nuestra Boda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+:root{
+  --beige:#f3ede7;
+  --terracotta:#c8a296;
+  --olive:#8a8f6a;
+  --sage:#a8b39a;
+  --wood:#8b6f5a;
+  --dark:#2f2f2f;
+  --white:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Montserrat',sans-serif;
+  background:linear-gradient(180deg, #f9f6f2 0%, var(--beige) 100%);
+  color:#333;
+  line-height:1.9;
+  font-size:19px;
+  overflow-x:hidden;
+}
+
+/* HEADER */
+.header{
+  padding:70px 20px 50px;
+  text-align:center;
+  background:#fff;
+  position:relative;
+  z-index:2;
+}
+
+.header h1{
+  font-family:'Playfair Display',serif;
+  font-size:3.8rem;
+  color:var(--dark);
+}
+
+.header span{
+  color:var(--terracotta);
+}
+
+/* COUNTDOWN */
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-top:35px;
+  flex-wrap:wrap;
+}
+
+.time-box{
+  background:#fff;
+  padding:18px 22px;
+  border-radius:18px;
+  min-width:95px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.time-box span{
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:2.3rem;
+  color:var(--olive);
+}
+
+.time-box small{
+  font-size:.9rem;
+  letter-spacing:1px;
+  color:#777;
+}
+
+/* Nuestro Si para Siempre */
+.band{
+  background:linear-gradient(90deg, var(--terracotta), var(--wood));
+  padding:30px 20px;
+  text-align:center;
+  color:#fff;
+  font-size:1.6rem;
+  letter-spacing:4px;
+  font-weight:600;
+  text-transform:uppercase;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:65vh;
+  background:url("headpicture.jpg") center/cover no-repeat;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.25);
+}
+
+/* PHRASE */
+.monogram{
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  font-size:4.8rem;          /* MÁS GRANDE */
+  margin-top:60px;           /* SEPARA DE LA IMAGEN */
+  margin-bottom:90px;
+  color:var(--olive);
+  letter-spacing:1px;        /* Elegancia */
+  line-height:1.2;
+}
+
+/* BOARDING CARD */
+.card{
+  max-width:480px;
+  background:#fff;
+  margin:0 auto;
+  padding:55px 40px;
+  border-radius:22px;
+  text-align:center;
+  box-shadow:0 28px 70px rgba(0,0,0,.14);
+}
+
+.card h3{
+  letter-spacing:4px;
+  color:var(--olive);
+  margin-bottom:35px;
+}
+
+.card p{
+  font-size:1.2rem;
+  margin-bottom:16px;
+}
+
+.badge{
+  margin-top:35px;
+  background:linear-gradient(135deg,var(--terracotta),var(--wood));
+  color:#fff;
+  padding:12px 26px;
+  border-radius:35px;
+}
+
+/* SECTIONS */
+.section{
+  max-width:1100px;
+  margin:150px auto;
+  padding:0 25px;
+  text-align:center;
+}
+
+.section h2{
+  font-family:'Playfair Display',serif;
+  font-size:3.3rem;
+  margin-bottom:35px;
+}
+
+.section p{
+  font-size:1.3rem;
+  max-width:850px;
+  margin:0 auto;
+}
+
+/* LOCATION */
+.location{
+  background:#fff;
+  padding:65px;
+  border-radius:30px;
+  box-shadow:0 25px 60px rgba(0,0,0,.1);
+}
+
+.map-btn{
+  display:inline-flex;
+  gap:14px;
+  margin-top:40px;
+  padding:18px 46px;
+  border-radius:50px;
+  background:var(--olive);
+  color:#fff;
+  text-decoration:none;
+}
+
+/* GIFT */
+.gift{
+  background:#fff;
+  padding:70px;
+  border-radius:30px;
+  box-shadow:0 25px 60px rgba(0,0,0,.1);
+}
+
+.gift i{
+  font-size:3.5rem;
+  color:var(--terracotta);
+  margin-bottom:25px;
+}
+
+/* RSVP */
+.whatsapp{
+  display:flex;
+  gap:35px;
+  justify-content:center;
+  margin-top:55px;
+  flex-wrap:wrap;
+}
+
+.whatsapp a{
+  padding:20px 48px;
+  border-radius:55px;
+  text-decoration:none;
+  color:#fff;
+  display:flex;
+  gap:14px;
+}
+
+.edwin{background:#25D366}
+.tati{background:#128C7E}
+
+/* FOOTER */
+.footer{
+  padding:90px 20px;
+  text-align:center;
+  color:#777;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .header h1{font-size:3rem}
+  .monogram{font-size:3rem}
+}
+.dynamic-gallery{
+  max-width:1500px; /* más ancho */
+  margin:150px auto;
+  padding:0 45px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); /* columnas más grandes */
+  gap:40px;
+}
+.dynamic-gallery img{
+  width:100%;
+  height:580px; /* imágenes más altas */
+  object-fit:cover;
+  border-radius:26px;
+  box-shadow:0 30px 70px rgba(0,0,0,.18);
+  transition:transform .4s ease;
+}
+
+.dynamic-gallery img:hover{
+  transform:scale(1.05);
+}
+@media(max-width:768px){
+  .dynamic-gallery{
+    grid-template-columns:1fr;
+    padding:0 20px;
+  }
+
+  .dynamic-gallery img{
+    height:480px;
+  }
+}
+
+.dynamic-gallery img:hover{
+  transform:scale(1.04);
+}
+.full-image{
+  width:100%;
+  height:90vh;
+  background-size:cover;
+  background-position:center;
+  margin:120px 0;
+  border-radius:0;
+}
+
+.split-image{
+  width:100%;
+  height:650px;
+  background-size:cover;
+  background-position:center;
+  border-radius:30px;
+  margin:120px auto;
+  max-width:1100px;
+  box-shadow:0 30px 70px rgba(0,0,0,.18);
+}
+
+@media(max-width:768px){
+  .full-image{height:55vh}
+  .split-image{height:380px}
+}
+
+</style>
+<script>
+function openCalendar(e){
+  e.preventDefault();
+
+  const title = encodeURIComponent("Boda Civil · Edwin & Tati");
+  const details = encodeURIComponent("Celebración de nuestra boda civil 💍");
+  const location = encodeURIComponent("El Morrito, Lourdes, Opico, El Salvador");
+
+  // Fecha: 15 marzo 2026, 4:00 PM – 8:00 PM (hora local)
+  const start = "20260315T160000";
+  const end   = "20260315T200000";
+
+  // Google Calendar
+  const googleCalendar =
+    `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&details=${details}&location=${location}`;
+
+  // Archivo ICS (Apple / Outlook)
+  const icsContent = `
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:${title}
+DESCRIPTION:${details}
+LOCATION:${location}
+DTSTART:${start}
+DTEND:${end}
+END:VEVENT
+END:VCALENDAR
+  `.trim();
+
+  const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+
+  // Detectar iPhone / Mac
+  if (/iPhone|iPad|Mac/i.test(navigator.userAgent)) {
+    window.location.href = url;
+  } else {
+    window.open(googleCalendar, "_blank");
+  }
+}
+</script>
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const galleryImages = [
+    "Imagen1.jpg",
+    "imagen2.jpg",
+    "imagen3.jpg"
+  ];
+
+  const galleryContainer = document.querySelector(".dynamic-gallery");
+
+  galleryImages.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "Edwin & Tati";
+    galleryContainer.appendChild(img);
+  });
+
+});
+</script>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Edwin <span>&</span> Tati</h1>
+
+  <!-- COUNTDOWN -->
+  <div class="countdown">
+    <div class="time-box"><span id="days">00</span><small>DÍAS</small></div>
+    <div class="time-box"><span id="hours">00</span><small>HORAS</small></div>
+    <div class="time-box"><span id="minutes">00</span><small>MIN</small></div>
+    <div class="time-box"><span id="seconds">00</span><small>SEG</small></div>
+  </div>
+</div>
+
+<div class="band">DESTINO: NUESTRO “SÍ” PARA SIEMPRE</div>
+
+<div class="hero"></div>
+<!-- GALERÍA DINÁMICA -->
+<div class="dynamic-gallery"></div>
+
+<div class="monogram">Dos almas, un camino, una vida juntos</div>
+
+<!-- Invitación Especial -->
+<div class="card">
+  <h3>🌿 Invitación Especial</h3>
+  <p><strong>Destino:</strong> El Inicio de Nuestra Historia </p>
+  <p><strong>Fecha:</strong> 15 de marzo de 2026</p>
+  <p><strong>Hora:</strong> 4:00 PM</p>
+  <a class="badge" href="#" onclick="openCalendar(event)">
+  📅 Guardar la fecha
+</a>
+</div>
+
+<!-- LOCATION -->
+<section class="section">
+  <h2>Lugar del Evento</h2>
+  <div class="location">
+    <p><strong>El Morrito, Lourdes</strong></p>
+    <p>Kilómetro 27½, Carretera Panamericana</p>
+    <p>Opico, El Salvador</p>
+    <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=El+Morrito+Lourdes+Opico+El+Salvador" target="_blank">
+      <i class="fas fa-location-dot"></i> Ver ubicación
+    </a>
+  </div>
+</section>
+
+<!-- INVITATION -->
+<section class="section">
+  <h2>Detalles de la Invitación</h2>
+  <p>
+Hemos elegido celebrar este día tan especial de manera íntima, rodeados de personas que han formado parte importante en nuestras vidas.
+
+Tú eres una de ellas, y por eso tu presencia significa mucho para nosotros.
+  </p>
+</section>
+
+<!-- GIFT -->
+<section class="section">
+  <div class="gift">
+    <i class="fas fa-envelope"></i>
+    <p>
+      Tu compañía en este día tan especial es el regalo más valioso para nosotros.
+      <br><br>
+Si gustas tener un detalle adicional, lo recibiremos con cariño en un <strong>sobre</strong> 🤍
+    </p>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="section">
+  <h2>Confirmar Asistencia</h2>
+  <p>Por favor confirma antes del <strong>10 de febrero</strong></p>
+  <div class="whatsapp">
+    <a class="edwin" href="https://wa.me/50371249558" target="_blank"><i class="fab fa-whatsapp"></i> Escribir a Edwin</a>
+    <a class="tati" href="https://wa.me/50374392670" target="_blank"><i class="fab fa-whatsapp"></i> Escribir a Tati</a>
+  </div>
+</section>
+<section class="section">
+  <p style="
+    font-family:'Playfair Display',serif;
+    font-size:1.4rem;
+    color:#555;
+    max-width:850px;
+    margin:0 auto;
+    line-height:1.8;
+    font-style:italic;
+  ">
+    “Así que ya no son dos, sino uno solo.  
+    Por tanto, lo que Dios ha unido, que no lo separe el hombre.”
+    <br><br>
+    <strong>Mateo 19:6</strong>
+  </p>
+</section>
+
+<div class="footer">Edwin & Tati · 15.03.2026</div>
+
+<script>
+const weddingDate = new Date("March 15, 2026 16:00:00").getTime();
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = weddingDate - now;
+
+  if (diff < 0) return;
+
+  document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+  document.getElementById("hours").innerText = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  document.getElementById("minutes").innerText = Math.floor((diff / (1000 * 60)) % 60);
+  document.getElementById("seconds").innerText = Math.floor((diff / 1000) % 60);
+}, 1000);
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
